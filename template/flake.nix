@@ -22,8 +22,8 @@
             overlays = [ inputs.ocaml-debug-info-overlay.overlays.default ];
           };
 
-          devShells = pkgs.mkShell {
-            packages = with ocamlPackages; [
+          devShells.default = pkgs.mkShell {
+            packages = with pkgs.ocamlPackages; [
               ocaml
             ];
           };
